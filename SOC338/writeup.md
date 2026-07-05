@@ -1,4 +1,5 @@
 # Incident Investigation - [SOC338 Lumma Stealer - DLL Side-Loading via Click Fix Phishing]
+[https://app.letsdefend.io/case-management/casedetail/cfdeangelis/316]
 
 > **Status:** Complete  
 > **Date:** 2025-MAR-13  
@@ -96,7 +97,7 @@ Internal Microsoft Exchange Server (172.16.20.3)
 
 ---
 
-## 3. Email Investigation (if applicable)
+## 3. Email Investigation
 
 ### Sender
 
@@ -116,7 +117,7 @@ None
 
 ### Embedded URLs
 ```
-[-](https://www.windows-update.site/)
+https://www.windows-update.site/
 ```
 ### Observations
 - Sender domain impersonated Microsoft's Windows Update branding.
@@ -205,9 +206,6 @@ https://www.windows-update.site/
 https://overcoatpassably.shop/Z8UZbPyVpGfdRS/maloy.mp4
 ```
 
-#### File Hashes
-
--
 
 #### File Names
 
@@ -216,10 +214,6 @@ https://overcoatpassably.shop/Z8UZbPyVpGfdRS/maloy.mp4
 #### Suspicious Processes
 - PowerShell.exe
 - mshta.exe
-
-#### Registry Keys
-
--
 
 ---
 
