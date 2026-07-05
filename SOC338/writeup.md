@@ -19,7 +19,7 @@
 |-------|-------|
 | Alert Name | SOC338 - Lumma Stealer - DLL Side-Loading via ClickFix Phishing |
 | Time Detected | March 13, 2025 09:44 AM |
-| Severity | Medium |
+| Severity | Critical |
 | SMTP Server | 132.232.40.201 |
 | Sender | update@windows-update.site |
 | Recipient | dylan@letsdefend.io |
