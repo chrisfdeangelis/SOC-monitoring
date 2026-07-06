@@ -10,7 +10,7 @@
 # Objective
 
 
-> Investigate a web attack (CVE-2024-3400) on an unpatched Palo Alto Firewall.  In this case, there was little evidence to support the attack was actually successful.  However, the firewall is vulerable to this attack type in the future and should be patched with ABSOULTE urgency.
+> Investigate a web attack (CVE-2024-3400) on an unpatched Palo Alto Firewall.  In this case, there was little evidence to support the attack was actually successful.  However, the firewall is vulerable to this attack type in the future and should be patched with ABSOLUTE urgency.
 
 ---
 
