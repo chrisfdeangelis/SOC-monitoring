@@ -1,7 +1,7 @@
 # Incident Investigation - [Incident Name]
 
 > **Status:** Complete  
-> **Date:** YYYY-MM-DD  
+> **Date:** YYYY-MMM-DD  
 > **Platform:** LetsDefend / Splunk / QRadar / Wazuh / etc.  
 > **Severity:** Low | Medium | High | Critical
 
