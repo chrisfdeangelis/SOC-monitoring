@@ -1,9 +1,9 @@
-# Incident Investigation - [Incident Name]
+# Incident Investigation - [SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400)]
 
 > **Status:** Complete  
-> **Date:** YYYY-MM-DD  
-> **Platform:** LetsDefend / Splunk / QRadar / Wazuh / etc.  
-> **Severity:** Low | Medium | High | Critical
+> **Date:** 2024-APR-18  
+> **Platform:** LetsDefend
+> **Severity:** Critical
 
 ---
 
@@ -13,7 +13,7 @@ Briefly describe why the alert was generated and what this investigation aims to
 
 Example:
 
-> Investigate a phishing alert to determine whether the email is malicious, whether the user interacted with it, and whether any endpoint compromise occurred.
+> Investigate a web attack (CVE-2024-3400).
 
 ---
 
@@ -21,15 +21,15 @@ Example:
 
 | Field | Value |
 |-------|-------|
-| Alert Name | |
-| Time Detected | |
-| Severity | |
-| Source IP | |
-| Destination IP | |
+| Alert Name | SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400) |
+| Time Detected | 2024-APR-18 03:09 |
+| Severity | Critical |
+| Source IP | 144.172.79.92 |
+| Destination IP | 172.16.17.139 |
 | Source User | |
 | Destination User | |
-| Hostname | |
-| Detection Rule | |
+| Hostname | PA-Firewall-01 |
+|Requested URL| 172.16.17.139/global-protect/login.esp|
 
 ---
 
