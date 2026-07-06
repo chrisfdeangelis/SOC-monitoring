@@ -1,5 +1,5 @@
 # Incident Investigation - [SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400)]
-
+[https://app.letsdefend.io/case-management/casedetail/cfdeangelis/249]
 > **Status:** Complete  
 > **Date:** 2024-APR-18  
 > **Platform:** LetsDefend
