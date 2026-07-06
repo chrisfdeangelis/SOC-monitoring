@@ -9,9 +9,6 @@
 
 # Objective
 
-Briefly describe why the alert was generated and what this investigation aims to determine.
-
-Example:
 
 > Investigate a web attack (CVE-2024-3400).
 
@@ -22,7 +19,7 @@ Example:
 | Field | Value |
 |-------|-------|
 | Alert Name | SOC274 - Palo Alto Networks PAN-OS Command Injection Vulnerability Exploitation (CVE-2024-3400) |
-| Time Detected | 2024-APR-18 03:09 |
+| Time Detected | 2024-APR-18 15:09 |
 | Severity | Critical |
 | Source IP | 144.172.79.92 |
 | Destination IP | 172.16.17.139 |
@@ -38,14 +35,24 @@ Example:
 ## Questions
 
 - What triggered the alert?
+
+**Characteristics exploit pattern Detected on Cookie and Request, indicative exploitation of the CVE-2024-3400.**
 - Is the source internal or external?
+
+**External**
 - Who owns the affected asset?
+
+  **Firewall.  Ownded by security team**
 - Is the activity expected?
+
+  **No**
 - What systems are involved?
+
+  **Palo Alto firewall (172.16.17.139)**
 
 ### Initial Assessment
 
-Write a short paragraph summarizing your first impression before digging deeper.
+Palo Alto firewall (172.16.17.139) was targeted via command injection.  CVE-2024-3400 is a vulnerability applicable to certain PAN-OS versions.  Reviewing the Vendor Advisory, this firewall is indeed running an impacted OS version of PAN-OS 10.2.0 which could leave it subject to root-user level code execution.
 
 ---
 
@@ -53,25 +60,21 @@ Write a short paragraph summarizing your first impression before digging deeper.
 
 ## 1. Asset Identification
 
-### Affected User
-
--
-
 ### Hostname
 
--
+-PA-Firewall-01
 
 ### IP Address
 
--
+-172.16.17.139
 
 ### Asset Owner
 
--
+-Security team
 
 ### Last Logon
 
--
+-2024-APR-18 07:05
 
 ---
 
@@ -79,11 +82,11 @@ Write a short paragraph summarizing your first impression before digging deeper.
 
 ### Source
 
--
+-144.172.79.92
 
 ### Destination
 
--
+-172.16.17.139
 
 ### Reputation Checks
 
@@ -93,7 +96,9 @@ Write a short paragraph summarizing your first impression before digging deeper.
 - WHOIS / ASN
 
 ### Findings
-
+-Source IP belongs to RouterHostingLLC (AS14956)
+-AbuseIPDB reports an Unauthorized Scraping Attempt
+-VirusTotal has much more comprehensive data, with many malicious/malware attempts reported
 ---
 
 ## 3. Email Investigation (if applicable)
