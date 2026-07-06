@@ -171,29 +171,29 @@ No history
 
 | Technique | ID |
 |-----------|----|
-| | |
-| | |
-| | |
+|Exploit Public-Facing Application | T1190|
+|Command and Scripting Interpreter | T1059|
 
 ---
 
 # Root Cause
 
-Describe how the attack occurred.
-
-Example:
-
-> The user clicked a phishing email which launched an obfuscated PowerShell command that executed `mshta.exe` against a remote payload.
+> Device from cloudzy.com (144.172.79.92) sent an HTTP POST with a malicious cookie to PA-Firewall-01 (172.16.17.139).  The cookie was configured to traverse directories and test command execution of whoami via the shell.  The attempt failed.
 
 ---
 
 # Impact Assessment
 
 - Was the attack successful?
+  **No**
 - Was malware executed?
+  **No**
 - Was persistence established?
+  **No**
 - Was lateral movement observed?
+  **No**
 - Was data exfiltration observed?
+  **No**
 
 ---
 
@@ -212,11 +212,11 @@ Example:
 
 **Classification**
 
-- True Positive / False Positive
+- False Positive
 
 **Summary**
 
-Write 1–3 paragraphs explaining exactly what happened, why you reached your conclusion, and what actions were taken.
+Device from cloudzy.com (144.172.79.92) sent an HTTP POST with a malicious cookie to PA-Firewall-01 (172.16.17.139).  The cookie was configured to traverse directories and test command execution of whoami via the shell.  The attempt failed.
 
 ---
 
